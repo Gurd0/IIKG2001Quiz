@@ -1,0 +1,26 @@
+{
+  "name": "node-quiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gurd0/IIKG2001Quiz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gurd0/IIKG2001Quiz/issues"
+  },
+  "homepage": "https://github.com/Gurd0/IIKG2001Quiz#readme",
+  "dependencies": {
+    "daemon": "^1.1.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}

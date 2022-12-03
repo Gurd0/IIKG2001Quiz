@@ -1,0 +1,86 @@
+<form method="post" id="quizz"></form>
+
+<script>
+   
+  
+  
+  async function fetchQuizz(){
+    const response = await fetch("test.json");
+    fetch("test.json")
+    .then(response => response.json())
+    .then(json => {
+      return(json)
+    });
+}
+
+const createQuestion = ({ question, answer, options, explanation }, i) => {
+  const field = document.createElement('fieldset')
+  field.innerHTML = `<legend>Question ${i}</legend>
+    <p>${question}</p>
+    ${ options.map((option) =>
+       `<div>
+      <input type="radio" id="option-${option}" name="answer${i}" value="${option}" onclick="checkAns('${option}', '${answer}','${explanation}', ${i})">
+      <label for="option-${option}">${option}</label>
+      
+    </div>`).join('') }
+    `
+   const divRes = document.createElement('div')  
+   divRes.setAttribute("id", "respons-"+i)
+   const divExp = document.createElement('div')  
+   divExp.setAttribute("id", "explanation-"+i)
+
+   field.append(divRes)
+   field.append(divExp)
+   
+   
+
+   return field;
+}
+function checkAns(option, answer, explanation, i){
+    const respons = document.getElementById("respons-" +i)
+    const exp = document.getElementById("explanation-" +i)
+    if(option == answer){
+      respons.textContent = "rætt"
+      exp.textContent = explanation 
+    }else{
+      respons.textContent = "feil"
+    }
+
+}
+
+async function createQuizz() {
+  const form = document.getElementById('quizz')
+  const response = await fetch("test.json");
+    fetch("test.json")
+    .then(response => response.json())
+    .then(json => {
+      const questions =  Object.values(json)
+     
+      
+    // Shuffle array
+    const shuffled = shuffleArray(questions)//questions.sort(() => 0.5 - Math.random());
+
+    // Get sub-array of first n elements after shuffled
+    let selected = shuffled.slice(0, 5);
+
+      
+      selected.forEach((question, i) => 
+      {
+        const field = createQuestion(question, i + 1)
+        form.appendChild(field)
+        
+      })
+      
+    });
+}
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array
+}
+createQuizz()
+</script>
