@@ -1,0 +1,175 @@
+<style>
+fieldset{
+    background: linear-gradient(#ffffff, #ebeaea);
+}
+</style>
+<nav>
+    <label for="domain">Domain:</label>
+    <select id="domain">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="all" selected>all</option>
+    </select>
+  
+    <label for="size">Size:</label>
+    <select id="size">
+      <option value="1">1</option>
+      <option value="5" selected>5</option>
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="all">all</option>
+    </select>
+
+    <label for="type">Type:</label>
+    <select id="type">
+      <option value="quiz">Quiz</option>
+      <option value="training" selected>Training</option>
+    </select>
+    <button onclick="createQuizz()">Get questions</button>
+  </nav>
+  <div id="statsContainer"></div>
+
+  <form method="post" id="quizz"></form>
+  
+  <div id="quizBtn"></div>
+  
+<script>
+
+const createQuestionQuiz = ({ question, answer, options, explanation }, i) => {
+  const field = document.createElement('fieldset')
+  field.innerHTML = `<legend>Question ${i}</legend>
+    <p>${question}</p>
+    ${ options.map((option, index) =>
+       `<div>
+      <input type="radio" id="question-${i}-option-${index+1}" name="answer${i}" value="${option}">
+      <label for="question-${i}-option-${index+1}" id="${option}">${option}</label>
+      
+    </div>`).join('') }
+    `  
+   return field;
+}
+const createQuestionTraining = ({ question, answer, options, explanation }, i) => {
+  const field = document.createElement('fieldset')
+  field.innerHTML = `<legend>Question ${i}</legend>
+    <p>${question}</p>
+    ${ options.map((option) =>
+       `<div>
+      <input type="radio" id="option-${option}" name="answer${i}" value="${option}" onclick="checkAns('${option}', '${answer}','${explanation}', ${i})">
+      <label for="option-${option}">${option}</label>
+      
+    </div>`).join('') }
+    `
+   const divRes = document.createElement('div')  
+   divRes.setAttribute("id", "respons-"+i)
+   const divExp = document.createElement('div')  
+   divExp.setAttribute("id", "explanation-"+i)
+   field.append(divRes)
+   field.append(divExp)
+   
+   return field;
+}
+function checkAns(option, answer, explanation, i){
+    const respons = document.getElementById("respons-" +i)
+    const exp = document.getElementById("explanation-" +i)
+    if(option == answer){
+      respons.textContent = "rætt"
+      exp.textContent = explanation 
+    }else{
+      respons.textContent = "feil"
+    }
+}
+async function checkQuestions(){
+    let correct = 0
+    let wrong = 0
+    const form = document.getElementById('quizz')
+    const fieldsets = form.querySelectorAll("fieldset")
+    const statsContainer = document.getElementById('statsContainer')
+    let t
+    //TODO lag ein const å env 
+    await fetch("/api/iikg2001?size=all&domain=all")
+    .then(response => response.json())
+    .then(json => {
+      questions = Object.values(json)
+      
+        for (var i = 0; i < fieldsets.length; i++) {
+            // Get a reference to the current div element
+            let field = fieldsets[i];
+
+            field.disabled = true;
+
+            let questionText = field.querySelector('p')
+            
+            const questionObject = questions.filter((questionObject) => questionObject.question === questionText.textContent)
+            let answer = questionObject[0].answer
+            
+
+            let selectedInput = field.querySelector('input:checked');
+            const rightAnswerLable = document.getElementById(answer)
+            if(selectedInput == null){
+                rightAnswerLable.style.color = 'green'
+                wrong++
+            }else{
+                const selectedAnswerLable = document.getElementById(selectedInput.value)
+                
+                if(answer == selectedInput.value){
+                    selectedAnswerLable.style.color = 'green'
+                    correct++
+                }else{
+                    selectedAnswerLable.style.color = 'red'
+                    rightAnswerLable.style.color = 'green'
+                    wrong++
+                }
+            }
+        }
+        console.log(`Correct :  ${correct} || Wrong : ${wrong}`)
+        statsContainer.innerHTML += `<p>Correct :  ${correct} || Wrong : ${wrong} || ${(correct/(wrong+correct))*100}%</p>`
+        //Scroll to top of page
+        scrollingElement = (document.scrollingElement || document.body)
+        scrollingElement.scrollTop = 0;
+    })
+}
+async function createQuizz() {
+  const form = document.getElementById('quizz')
+  const quizBtn = document.getElementById('quizBtn')
+  const statsContainer = document.getElementById('statsContainer')
+  const size = document.getElementById('size')
+  const domain = document.getElementById('domain')
+  const type = document.getElementById('type')
+
+  //local api url with parms from dropdown
+  let url = `/api/iikg2001?size=${size.options[size.selectedIndex].value}&domain=${domain.options[domain.selectedIndex].value}`
+
+  //Empty containers
+  form.innerHTML = ""
+  quizBtn.innerHTML = ""
+  statsContainer.innerHTML = ""
+
+  console.log(url)
+  await fetch(url)
+    .then(response => response.json())
+    .then(json => {
+      const questions =  Object.values(json)
+      
+      
+    switch(type.options[type.selectedIndex].value) {
+        case "quiz":
+            questions.forEach((question, i) => {
+                const field = createQuestionQuiz(question, i + 1)
+                form.appendChild(field)
+            })
+            
+            quizBtn.innerHTML += `<button onclick="checkQuestions()">Check</button>`
+            break;
+        case "training":
+            questions.forEach((question, i) => {
+                const field = createQuestionTraining(question, i + 1)
+                form.appendChild(field)
+            })
+            break;
+      }
+   
+});
+}
+createQuizz()
+</script>

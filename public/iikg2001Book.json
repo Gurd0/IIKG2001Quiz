@@ -1,0 +1,825 @@
+{
+"domains": [
+    {
+        "q1":{
+            "question": "The PRIMARY reason for incorporating security into the software development life cycle is to protect",
+            "options":[
+                "the unauthorized disclosure of information.",
+                "the corporate brand and reputation.",
+                "against hackers who intend to misuse the software.",
+                "the developers from releasing software with security defects."
+            ],
+            "answer": "the corporate brand and reputation.",
+            "explanation" :"When security is incorporated in to the software development life cycle, confidentiality, integrity and availability can be assured and external hacker and insider threat attempts thwarted. Developers will generate more hack-resilient software with fewer vulnerabilities, but protection of the organization’s reputation and corporate brand is the primary reason for software assurance."
+        },
+        "q2":{
+            "question": "The resiliency of software to withstand attacks that attempt modify or alter data in an unauthorized manner is referred to as",
+            "options":[
+                "Confidentiality",
+                "Integrity",
+                "Availability",
+                "Authorization"
+            ],
+            "answer": "Integrity",
+            "explanation" : "When the software program operates as it is expected to, it is said to be reliable or internally consistent. Reliability is an indicator of the integrity of software. Hack resilient software are reliable (functioning as expected), resilient (able to withstand attacks) and recoverable (capable of being restored to normal operations when breached or upon error)."
+        },
+        "q3":{
+            "question": "The MAIN reason as to why the availability aspects of software must be part of the organization’s software security initiatives is:",
+            "options":[
+                "software issues can cause downtime to the business",
+                "developers need to be trained in the business continuity procedures.",
+                "testing for availability of the software and data is often ignored",
+                "hackers like to conduct Denial of Service (DoS) attacks against the organization."
+            ],
+            "answer": "software issues can cause downtime to the business",
+            "explanation" : "One of the tenets of software assurance is ‘availability’. Software issues can cause software unavailability and downtime to the business. This is often observed as a denial of service (DoS) attack."
+        },
+        "q4":{
+            "question": "Developing the software to monitor its functionality and report when the software is down and unable to provide the expected service to the business is a protection to assure which of the following?",
+            "options":[
+                "Confidentiality",
+                "Integrity",
+                "Availability",
+                "Authorization"
+            ],
+            "answer": "Availability",
+            "explanation" : "Confidentiality controls assures protection against unauthorized disclosure. Integrity controls assures protection unauthorized modifications or alterations. Availability controls assures protection against downtime/denial of service and destruction of information. Authentication is the mechanism to validate the claims/credentials of an entity. Authorization has to do with rights and privileges that a subject has upon requested objects."
+        },
+        "q5":{
+            "question": "When a customer attempts to log into their bank account, the customer is required to enter a nonce from the token device that was issued to the customer by the bank. This type of authentication is also known as which of the following?",
+            "options":[
+                "Ownership based authentication.",
+                "Two factor authentication.",
+                "Characteristic based authentication.",
+                "Knowledge based authentication."
+            ],
+            "answer": "Ownership based authentication.",
+            "explanation" : "Authentication can be achieved in one or more of the following ways. Using something one knows (knowledge based), something one has (ownership based) and something one is (characteristic based). Using a token device is ownership based authentication. When more than one way is used for authentication purposed, it is referred to as multifactor authentication and is recommended over single factor authentication."
+        },
+        "q6":{
+            "question": "Multi-factor authentication is most closely related to which of the following security design principles?",
+            "options":[
+                "Separation of Duties",
+                "Defense in depth.",
+                "Complete mediation.",
+                "Open design."
+            ],
+            "answer": "Defense in depth.",
+            "explanation" : "Having more than one way of authentication provides for a layered defense which is the premise of the defense in depth security design principle."
+        },
+        "q7":{
+            "question": "Audit logs can be used for all of the following EXCEPT",
+            "options":[
+                "providing evidentiary information.",
+                "assuring that the user cannot deny their actions.",
+                "detecting the actions that were undertaken.",
+                "preventing a user from performing some unauthorized operations."
+            ],
+            "answer": "preventing a user from performing some unauthorized operations.",
+            "explanation" : "Audit log information can be a detective control (providing evidentiary information), a deterrent control when the users knows that they are being audited but it cannot prevent any unauthorized actions. When the software logs user actions, it also provides non-repudiation capabilities because the user cannot deny their actions."
+        },
+        "q8":{
+            "question": "Organizations often pre-determine the acceptable number of user errors before recording them as security violations. This number is otherwise known as:",
+            "options":[
+                "Clipping level.",
+                "Known Error.",
+                "Minimum Security Baseline.",
+                "Maximum Tolerable Downtime."
+            ],
+            "answer": "Clipping level.",
+            "explanation" : "The pre-determined number of acceptable user errors before recording the error as a potential security incident is referred to as clipping level. For example, if the number of allowed failed login attempts before the account is locked out is 3, then the clipping level for authentication attempts is 3."
+        },
+        "q9":{
+            "question": "A security principle that maintains the confidentiality, integrity and availability of the software and data, besides allowing for rapid recovery to the state of normal operations, when unexpected events occur is the security design principle of",
+            "options":[
+                "defense in depth.",
+                "economy of mechanisms.",
+                "fail secure",
+                "psychological acceptability"
+            ],
+            "answer": "fail secure",
+            "explanation" : "Fail secure principle prescribes that access decisions must be based on permission rather than exclusion. This means that the default situation is lack of access, and the protection scheme identifies conditions under which access is permitted. The alternative, in which mechanisms attempt to identify conditions under which access should be refused, presents the wrong psychological base for secure system design. A design or implementation mistake in a mechanism that gives explicit permission tends to fail by refusing permission, a safe situation, since it will be quickly detected. On the other hand, a design or implementation mistake in a mechanism that explicitly excludes access tends to fail by allowing access, a failure which may go unnoticed in normal use. This principle applies both to the outward appearance of the protection mechanism and to its underlying implementation."
+        },
+        "q10":{
+            "question": "Requiring the end user to accept an ‘AS-IS’ disclaimer clause before installation of your software is an example of risk",
+            "options":[
+                "avoidance",
+                "mitigation",
+                "transference",
+                "acceptance"
+            ],
+            "answer": "transference",
+            "explanation" : "When an “AS-IS” disclaimer clause is used, the risk is transferred from the publisher of the software to the user of the software"
+        },
+        "q11":{
+            "question": "An instrument that is used to communicate and mandate organizational and management goals and objectives at a high level is a",
+            "options":[
+                "standard",
+                "policy",
+                "baseline",
+                "guideline"
+            ],
+            "answer": "policy",
+            "explanation" : "Policies are high level documents that communicate the mandatory goals and objectives of company management. Standards are also mandatory but is not quite as high level as policy. Guidelines provide recommendations of how to implement a standard. Procedures are usually step by step instructions of how to perform an operation. A baseline is one that has the minimum levels of controls or configuration that needs to be implemented"
+        },
+        "q12":{
+            "question": "The Systems Security Engineering Capability Maturity Model (SSE- CMM®) is an internationally recognized standard that publishes guidelines to",
+            "options":[
+                "provide metrics for measuring the software and its behavior, and using the software in a specific context of use",
+                "evaluate security engineering practices and organizational management processes.",
+                "support accreditation and certification bodies that audit and certify information security management systems.",
+                "ensure that the claimed identity of personnel are appropriately verified."
+            ],
+            "answer": "evaluate security engineering practices and organizational management processes.",
+            "explanation" : "The evaluation of security engineering practices and organizational management processes are provided as guidelines and prescribed in the Systems Security Engineering Capability Maturity Model (SSE-CMM®). The SSE-CMM is an internationally recognized standard that is publishes as ISO 21827."
+        },
+        "q13":{
+            "question": "Which of the following is a framework that can be used to develop a risk based enterprise security architecture by determining security requirements after analyzing the business initiatives.",
+            "options":[
+                "Capability Maturity Model Integration (CMMI)",
+                "Sherwood Applied Business Security Architecture (SABSA)",
+                "Control Objectives for Information and related Technology (COBIT®)",
+                "Zachman Framework"
+            ],
+            "answer": "Sherwood Applied Business Security Architecture (SABSA)",
+            "explanation" : "SABSA is a proven framework and methodology for Enterprise Security Architecture and Service Management. SABSA ensures that the needs of your enterprise are met completely and that security services are designed, delivered and supported as an integral part of your business and IT management infrastructure."
+        },
+        "q14":{
+            "question": "Which of the following is a PRIMARY consideration for the software publisher when selling Commercially Off the Shelf (COTS) software?",
+            "options":[
+                "Service Level Agreements (SLAs).",
+                "Intellectual Property protection.",
+                "Cost of customization.",
+                "Review of the code for backdoors and Trojan horses."
+            ],
+            "answer": "Intellectual Property protection.",
+            "explanation" : "All of the other options are considerations for the software acquirer (purchaser)."
+        },
+        "q15":{
+            "question": "The Single Loss Expectancy can be determined using which of the following formula?",
+            "options":[
+                "Annualized Rate of Occurrence (ARO) x Exposure Factor",
+                "Probability x Impact",
+                "Asset Value x Exposure Factor",
+                "Annualized Rate of Occurrence (ARO) x Asset Value"
+            ],
+            "answer": "Asset Value x Exposure Factor",
+            "explanation" : "Single Loss Expectancy is the expected loss of a single disaster. It is computed as the product of asset value and the exposure factor. SLE = Asset Value x Exposure Factor."
+        },
+        "q16":{
+            "question": "Implementing IPSec to assure the confidentiality of data when it is transmitted is an example of risk",
+            "options":[
+                "avoidance",
+                "transference",
+                "mitigation",
+                "acceptance"
+            ],
+            "answer": "mitigation",
+            "explanation" : "The implementation of IPSec at the network layer helps to mitigate threats to the confidentiality of transmitted data."
+        },
+        "q17":{
+            "question": "The Federal Information Processing Standard (FIPS) that prescribe guidelines for biometric authentication is",
+            "options":[
+                "FIPS 140.",
+                "FIPS 186.",
+                "FIPS 197.",
+                "FIPS 201."
+            ],
+            "answer": "FIPS 201.",
+            "explanation" : "Personal Identity Verification (PIV) of Federal Employees and Contractors is published as FIPS 201 and it prescribes some guidelines for biometric authentication."
+        },
+        "q18":{
+            "question": "Which of the following is a multi-faceted security standard that is used to regulate organizations that collects, processes and/or stores cardholder data as part of their business operations?",
+            "options":[
+                "FIPS 201.",
+                "ISO/IEC 15408.",
+                "NIST SP 800-64.",
+                "PCI DSS."
+            ],
+            "answer": "PCI DSS.",
+            "explanation" : "The PCI DSS is a multifaceted security standard that includes requirements for security management, policies, procedures, network architecture, software design and other critical protective measures. This comprehensive standard is intended to help organizations proactively protect customer account data."
+        },
+        "q19":{
+            "question": "Which of the following is the current Federal Information Processing Standard (FIPS) that specifies an approved cryptographic algorithm to ensure the confidentiality of electronic data?",
+            "options":[
+                "Security Requirements for Cryptographic Modules (FIPS 140).",
+                "Peronal Identity Verification (PIV) of Federal Employees and Contractors (FIPS 201).",
+                "Advanced Encryption Standard (FIPS 197).",
+                "Digital Signature Standard (FIPS 186)."
+            ],
+            "answer": "Advanced Encryption Standard (FIPS 197).",
+            "explanation" : "The Advanced Encryption Standard (AES) specifies a FIPS-approved cryptographic algorithm that can be used to protect electronic data. The AES algorithm is a symmetric block cipher that can encrypt (encipher) and decrypt (decipher) information. Encryption converts data to an unintelligible form called ciphertext; decrypting the ciphertext converts the data back into its original form, called plaintext. The AES algorithm is capable of using cryptographic keys of 128, 192, and 256 bits to encrypt and decrypt data in blocks of 128 bits."
+        },
+        "q20":{
+            "question": "The organization that publishes the ten most critical web application security risks (Top Ten) is the",
+            "options":[
+                "Computer Emergency Response Team (CERT).",
+                "Web Application Security Consortium (WASC).",
+                "Open Web Application Security Project (OWASP).",
+                "Forums for Incident Response and Security Teams (FIRST)"
+            ],
+            "answer": "Open Web Application Security Project (OWASP).",
+            "explanation" : "The Open Web Application Security Project (OWASP) Top Ten provides a powerful awareness document for web application security. The OWASP Top Ten represents a broad consensus about what the most critical web application security flaws are."
+        },
+        "q21":{
+            "question": "The process of removing private information from sensitive data sets is referred to as",
+            "options":[
+                "Sanitization",
+                "Degaussing",
+                "Anonymization",
+                "Formatting"
+            ],
+            "answer": "Anonymization",
+            "explanation" : "Anonymization is the process of removing private information from the data. Anonymization techniques such as replacement, suppression, generalization and pertubation are useful to assure data privacy. It is important that you are familiar with these techniques. Sanitization has to do with inputs and outputs as a defensive control and includes techniques such as escaping and encoding. Degaussing and Formatting are information and media sanitization techniques and they are not selective of what they remove/dispose."
+        }
+},
+{
+        "q1":{
+            "question": "Which of the following MUST be addressed by software security requirements? Choose the BEST answer",
+            "options":[
+                "Technology used in building the application.",
+                "Goals and objectives of the organization.",
+                "Software quality requirements.",
+                "External auditor requirements."
+            ],
+            "answer": "Goals and objectives of the organization.",
+            "explanation" : "When determining software security requirements, it is imperative to address the goals and objectives of the organization. Management’s goals and objectives need to be incorporated into the organizational security policies. While external auditor, internal quality requirements and technology are factors that need consideration, compliance with organizational policies must be the foremost consideration."
+        },
+        "q2":{
+            "question": "Which of the following types of information is exempt from confidentiality requirements?",
+            "options":[
+                "Directory information.",
+                "Personally identifiable information (PII).",
+                "User’s card holder data.",
+                "Software architecture and network diagram."
+            ],
+            "answer": "Directory information.",
+            "explanation" : "Information that is public is also known as directory information. The name ‘directory’ information comes from the fact that such information can be found in a public directory like a phone book, etc. When information is classified as public information, confidentiality assurance protection mechanisms are not necessary"
+        },
+        "q3":{
+            "question": "Requirements that are identified to protect against the destruction of information or the software itself are commonly referred to as",
+            "options":[
+                "confidentiality requirements.",
+                "integrity requirements.",
+                "availability requirements.",
+                "authentication requirements."
+            ],
+            "answer": "availability requirements.",
+            "explanation" : "Destruction is the threat against availability as disclosure is the threat against confidentiality and alteration being the threat against integrity. "
+        },
+        "q4":{
+            "question": "The amount of time by which business operations need to be restored to service levels as expected by the business when there is a security breach or disaster is known as",
+            "options":[
+                "Maximum Tolerable Downtime (MTD).",
+                "Mean Time Before Failure (MTBF).",
+                "Minimum Security Baseline (MSB).",
+                "Recovery Time Objective (RTO)."
+            ],
+            "answer": "Recovery Time Objective (RTO).",
+            "explanation" : "Maximum Tolerable Downtime (MTD) is the maximum length of time a business process can be interrupted or unavailable without causing the business itself to fail. Recovery Time Objective (RTO) is the time period in which the organization should have the interrupted process running again, at or near the same capacity and conditions as before the disaster/downtime. MTD and RTO are part of availability requirements. It is advisable to set the RTO to be lesser than the MTD."
+        },
+        "q5":{
+            "question": "The use of an individual’s physical characteristics such as retinal blood patterns and fingerprints for validating and verifying the user’s identity if referred to as",
+            "options":[
+                "biometric authentication.",
+                "forms authentication.",
+                "digest authentication.",
+                "integrated authentication."
+            ],
+            "answer": "biometric authentication.",
+            "explanation" : "Forms authentication has to do with usernames and passwords that are input into a form (like a web page/form). Basic authentication transmits the credential s in Base64 encoded form while digest authentication provides the credentials as a hash value (also known as a message digest). Token based authentication uses credentials in the form of specialized tokens which is often used with a token device. Biometric authentication uses physical characteristics to provide the credential information."
+        },
+        "q6":{
+            "question": "Which of the following policies is MOST likely to include the following requirement? “All software processing financial transactions need to use more than one factor to verify the identity of the entity requesting access””",
+            "options":[
+                "Authorization",
+                "Authentication",
+                "Auditing",
+                "Availability."
+            ],
+            "answer": "Authentication",
+            "explanation" : "When two factors are used to validate an entity’s claim and/or credentials, it is referred to as two-factor authentication and when more than two factors are used for authentication purposes, it is referred to as multi-factor authentication. It is important to determine first, if there exists a need for two- or multi-factor authentication."
+        },
+        "q7":{
+            "question": "A means of restricting access to objects based on the identity of subjects and/or groups to which they belong, as mandated by the requested resource owner is the definition of",
+            "options":[
+                "Non-discretionary Access Control (NDAC).",
+                "Discretionary Access Control (DAC).",
+                "Mandatory Access Control (MAC).",
+                "Role based Access Control."
+            ],
+            "answer": "Discretionary Access Control (DAC).",
+            "explanation" : "Discretionary access control (DAC) is defined as “a means of restricting access to objects based on the identity of subjects and/or groups to which they belong.” The controls are discretionary in the sense that a subject with a certain access permission is capable of passing that permission (perhaps indirectly) on to any other subject. DAC restricts access to objects based on the identity of the subject and is distinctly characterized by the owner of the resource deciding who has access and their level of privileges or rights"
+        },
+        "q8":{
+            "question": "Requirements which when implemented can help to build a history of events that occurred in the software are known as",
+            "options":[
+                "authentication requirements.",
+                "archiving requirements.",
+                "accountability requirements.",
+                "authorization requirements."
+            ],
+            "answer": "accountability requirements.",
+            "explanation" : "Accountability requirements are those that assist in building a historical record of user actions. Audit trails can help detect when an unauthorized user makes a change or an authorized user makes an unauthorized change, both of which are cases of integrity violations. Auditing requirements not only help with forensic investigations as a detective control but can also be used for troubleshooting errors and exceptions, if the actions of the software are tracked appropriately. When auditing is combined with identification, it provides for accountability."
+        },
+        "q9":{
+            "question": "Which of the following is the PRIMARY reason for an application to be susceptible to a Man-in-the-Middle (MITM) attack?",
+            "options":[
+                "Improper session management",
+                "Lack of auditing",
+                "Improper archiving",
+                "Lack of encryption"
+            ],
+            "answer": "Improper session management",
+            "explanation" : "Easily guessable and non-random session identifiers can be hijacked and replayed if not managed appropriately and this can lead to MITM attacks."
+        },
+        "q10":{
+            "question": "The process of eliciting concrete software security requirements from high level regulatory and organizational directives and mandates in the requirements phase of the SDLC is also known as",
+            "options":[
+                "threat modeling.",
+                "policy decomposition.",
+                "subject-object modeling.",
+                "misuse case generation."
+            ],
+            "answer": "policy decomposition.",
+            "explanation" : "The process of eliciting concrete software security requirements from high level regulatory and organizational directives and mandates is referred to as policy decomposition. When the policy decomposition process completes, all the gleaned requirements must be measurable components."
+        },
+        "q11":{
+            "question": "The FIRST step in the Protection Needs Elicitation (PNE) process is to",
+            "options":[
+                "engage the customer",
+                "model information management",
+                "identify least privilege applications",
+                "conduct threat modeling and analysis"
+            ],
+            "answer": "engage the customer",
+            "explanation" : "IT is there for the business and not the other way round. The first step when determining protection needs is to engage the customer followed by modeling the information and identifying least privilege scenarios. Once an application profile is developed, then we can undertake threat modeling and analysis to determine the risk levels which can be communicated to the business to prioritize the risk"
+        },
+        "q12":{
+            "question": "A Requirements Traceability Matrix (RTM) that includes security requirements can be used for all of the following except",
+            "options":[
+                "ensuring scope creep does not occur",
+                "validating and communicating user requirements",
+                "determining resource allocations",
+                "identifying privileged code sections"
+            ],
+            "answer": "identifying privileged code sections",
+            "explanation" : "Identifying privileged code sections is part of threat modeling and not part of a RTM."
+        },
+        "q13":{
+            "question": "Parity bit checking mechanisms can be used for all of the following except",
+            "options":[
+                "Error detection.",
+                "Message corruption.",
+                "Integrity assurance.",
+                "Input validation."
+            ],
+            "answer": "Input validation.",
+            "explanation" : "Parity bit checking is primary used for error detection but it can be used for assuring the integrity of transferred files and messages"
+        },
+        "q14":{
+            "question": "Which of the following is an activity that can be performed to clarify requirements with the business users using diagrams that model the expected behavior of the software?",
+            "options":[
+                "Threat modeling",
+                "Use case modeling",
+                "Misuse case modeling",
+                "Data modeling"
+            ],
+            "answer": "Use case modeling",
+            "explanation" : "A use case models the intended behavior of the software or system. In other words, the use case describes behavior that the system owner intended. This behavior describes the sequence of actions and events that are to be taken to address a business need. Use case modeling and diagramming is very useful for specifying requirements. It can be effective in reducing ambiguous and incompletely articulated business requirements by explicitly specifying exactly when and under what conditions certain behavior occurs. Use case modeling is meant to model only the most significant system behavior and not all of it and so should not be considered a substitute for requirements specification documentation."
+        },
+        "q15":{
+            "question": "Which of the following is LEAST LIKELY to be identified by misuse case modeling?",
+            "options":[
+                "Race conditions",
+                "Mis-actors",
+                "Attacker’s perspective",
+                "Negative requirements"
+            ],
+            "answer": "Race conditions",
+            "explanation" : "Misuse cases, also known as abuse cases help identify security requirements by modeling negative scenarios. A negative scenario is an unintended behavior of the system, one that the system owner does not want to occur within the context of the use case. Misuse cases provide insight into the threats that can occur against the system or software. It provides the hostile users point of view and is an inverse of the use case. Misuse case modeling is similar to the use case modeling, except that in misuse case modeling, mis-actors and unintended scenarios or behavior are modeled. Misuse cases may be intentional or accidental. One of the most distinctive traits of misuse cases is that they can be used to elicit security requirements unlike other requirements determination methods that focus on end-user functional requirements."
+        },
+        "q16":{
+            "question": "Data classification is a core activity that is conducted as part of which of the following?",
+            "options":[
+                "Key Management Lifecycle",
+                "Information Lifecycle Management",
+                "Configuration Management",
+                "Problem Management"
+            ],
+            "answer": "Information Lifecycle Management",
+            "explanation" : "Data classification is the conscious effort to assign a level of sensitivity to data assets, based on potential impact upon disclosure, alteration or destruction. The results of the classification exercise can then be used to categorize the data elements into appropriate buckets. Data classification is part of information lifecycle management."
+        },
+        "q17":{
+            "question": "Web farm data corruption issues and card holder data encryption requirements need to be captured as part of which of the following requirements?",
+            "options":[
+                "Integrity.",
+                "Environment",
+                "International.",
+                "Procurement."
+            ],
+            "answer": "Environment",
+            "explanation" : "When determining requirements it is important to elicit requirements that are tied to the environment in which the data will be marshaled or processed. Viewstate corruption issues in web farm settings where all the servers were not configured identically or lack of card holder data encryption in public networks have been observed when the environmental requirements were not identified or taken into account."
+        },
+        "q18":{
+            "question": "When software is purchased from a third party instead of being built in-house, it is imperative to have contractual protection in place and have the software requirements explicitly specified in which of the following?",
+            "options":[
+                "Service Level Agreements (SLA).",
+                "Non-Disclosure Agreements (NDA).",
+                "Non-compete Agreements",
+                "Project plan."
+            ],
+            "answer": "Service Level Agreements (SLA).",
+            "explanation" : "SLAs should contain the levels of service expected for the software to provide and this becomes crucial when the software is not developed in-house."
+        },
+        "q19":{
+            "question": "When software is able to withstand attacks from a threat agent and not violate the security policy it is said to be exhibiting which of the following attributes of software assurance?",
+            "options":[
+                "Reliability",
+                "Resiliency",
+                "Recoverability",
+                "Redundancy"
+            ],
+            "answer": "Resiliency",
+            "explanation" : "Software is said to be reliable when it is functioning as expected to. Resiliency is the measure of the software’s ability to withstand an attack. When the software is breach, its ability to restore itself back to normal operations is known as the recoverability of the software. Redundancy has to do with high availability."
+        },
+        "q20":{
+            "question": "Infinite loops and improper memory calls are often known to cause threats to which of the following?",
+            "options":[
+                "Availability",
+                "Authentication",
+                "Authorization",
+                "Accountability"
+            ],
+            "answer": "Availability",
+            "explanation" : "Improper coding constructs such as infinite loops and improper memory management can lead to denial of service and resource exhaustion issues, which impacted availability."
+        },
+        "q21":{
+            "question": "Which of the following is used to communicate and enforce availability requirements of the business or client?",
+            "options":[
+                "Non-Disclosure Agreement (NDA).",
+                "Corporate Contract.",
+                "Service Level Agreements (SLA).",
+                "Threat model."
+            ],
+            "answer": "Service Level Agreements (SLA).",
+            "explanation" : "SLAs should contain the levels of service expected for the software to provide and this becomes crucial when the software is not developed in-house."
+        },
+        "q22":{
+            "question": "Software security requirements that are identified to protect against disclosure of data to unauthorized users is otherwise known as",
+            "options":[
+                "integrity requirements.",
+                "authorization requirements.",
+                "confidentiality requirements.",
+                "non-repudiation requirements."
+            ],
+            "answer": "confidentiality requirements.",
+            "explanation" : "Destruction is the threat against availability as disclosure is the threat against confidentiality and alteration being the threat against integrity."
+        },
+        "q23":{
+            "question": "The requirements that assure reliability and prevent alterations are to be identified in which section of the software requirements specifications (SRS) documentation?",
+            "options":[
+                "Confidentiality",
+                "Confidentiality",
+                "Availability",
+                "Accountability"
+            ],
+            "answer": "Integrity",
+            "explanation" : "Destruction is the threat against availability as disclosure is the threat against confidentiality and alteration being the threat against integrity."
+        },
+        "q24":{
+            "question": "Which of the following is a covert mechanism that assures confidentiality?",
+            "options":[
+                "Encryption",
+                "Steganography",
+                "Hashing",
+                "Masking"
+            ],
+            "answer": "Steganography",
+            "explanation" : "Encryption and Hashing are overt mechanisms to assure confidentiality. Masking is an obfuscating mechanism to assure confidential. Steganography which is hiding information within other media is a cover mechanisms to assure confidentiality. Steganography is more commonly referred to as invisible ink writing and is the art of camouflaging or hidden writing, where the information is hidden and the existence of the message itself is concealed. Steganography is primarily useful for covert communications and is useful and prevalent in military espionage communications"
+        },
+        "q25":{
+            "question": "As a means to assure confidentiality of copyright information, the security analyst identifies the requirement to embed information insider another digital audio, video or image signal. This is commonly referred to as",
+            "options":[
+                "Encryption",
+                "Hashing",
+                "Licensing",
+                "Watermarking"
+            ],
+            "answer": "Watermarking",
+            "explanation" : "Digital watermarking is the process of embedding information into a digital signal. These signals can be audio, video, or pictures."
+        },
+        "q26":{
+            "question": "Checksum validation can be used to satisfy which of the following requirements?",
+            "options":[
+                "Confidentiality",
+                "Integrity",
+                "Availability",
+                "Authentication"
+            ],
+            "answer": "Integrity",
+            "explanation" : "Parity bit checking is useful in the detection of errors or changes made to data when it is transmitted. A common usage of parity bit checking is to do a Cyclic Redundancy Check (CRC) for data integrity as well, especially for messages longer than one byte (8 bits) long. Upon data transmission, each block of data is given a computed CRC value, commonly referred to as a checksum. If there is an alteration between the origin of data and its destination, the checksum sent at the origin will not match with the one that is computed at the destination. Corrupted media (CD’s, DVDs) and incomplete downloads of software yield CRC errors."
+        },
+        "q27":{
+            "question": "A Requirements Traceability Matrix (RTM) that includes security requirements can be used for all of the following EXCEPT",
+            "options":[
+                "Ensure scope creep does not occur",
+                "Validate and communicate user requirements",
+                "Determine resource allocations",
+                "Identifying privileged code sections"
+            ],
+            "answer": "Identifying privileged code sections",
+            "explanation" : "Identifying privileged code sections is part of threat modeling and not part of a RTM."
+        }
+},
+{
+    "q1":{
+        "question": "During which phase of the software development lifecycle (SDLC) is threat modeling initiated?",
+        "options":[
+            "Requirements analysis",
+            "Design",
+            "Implementation",
+            "Deployment"
+        ],
+        "answer": "Design",
+        "explanation" : "Although it is important to visit the threat model during the development,  testing and deployment phase of the software development lifecycle (SDLC),  the threat modeling exercise should commence in the design phase of the  SDLC. "
+    },
+    "q2":{
+        "question": "Certificate Authority, Registration Authority, and Certificate Revocation Lists are all part of which of the following?",
+        "options":[
+            "Advanced Encryption Standard (AES)",
+            "Steganography",
+            "Public Key Infrastructure (PKI)",
+            "Lightweight Directory Access Protocol (LDAP)"
+        ],
+        "answer": "Public Key Infrastructure (PKI)",
+        "explanation" : "PKI makes it possible to securely exchange data by hiding or keeping secret a private key on one system while distributing the public key to the other systems participating in the exchange."
+    },
+    "q3":{
+        "question": "The use of digital signatures has the benefit of providing which of the following that is not provided by symmetric key cryptographic design?",
+        "options":[
+            "Speed of cryptographic operations",
+            "Confidentiality assurance",
+            "Key exchange",
+            "Non-repudiation"
+        ],
+        "answer": "Non-repudiation",
+        "explanation" : "Non-repudiation and proof of origin (authenticity) is provided by the  certificate authority (CA) attaching its digital signature, encrypted with the  private key of the sender, to the communication that is to be authenticated,  and this attests the authenticity of both the document and the sender."
+    },
+    "q4":{
+        "question": "When passwords are stored in the database, the best defense against disclosure attacks can be accomplished using",
+        "options":[
+            "encryption",
+            "masking",
+            "hashing",
+            "obfuscation"
+        ],
+        "answer": "hashing",
+        "explanation" : "An important use for hashes is storing passwords. The actual password should  never be stored in the database. Using hashing functions, you can store the  hash value of the user password and use that value to authenticate the user.  Because hashes are one-way (not reversible), they offer a heightened level of  confidentiality assurance."
+    },
+    "q5":{
+        "question": "Nicole is part of the ‘author’ role as well as she is included in the ‘approver’ role, allowing her to approve her own articles before it is posted on the company blog site. This violates the principle of",
+        "options":[
+            "least privilege",
+            "least common mechanisms",
+            "economy of mechanisms",
+            "separation of duties"
+        ],
+        "answer": "separation of duties",
+        "explanation" : "Separation of duties or sometimes it is referred to as separation of privilege is the principle that it is better to assign tasks to several specific individuals so that no one user has total control over the task themselves. It is closely related to the principle of least privilege which is the ideas that minimum amount of privilege is granted for the minimum (shortest) amount of time to individuals with a need to know. "
+    },
+    "q6":{
+        "question": "The primary reason for designing Single Sign On (SSO) capabilities is to",
+        "options":[
+            "increase the security of authentication mechanisms",
+            "simplify user authentication",
+            "have the ability to check each access request",
+            "allow for interoperability between wireless and wired networks"
+        ],
+        "answer": "simplify user authentication",
+        "explanation" : "The design principle of economy of mechanism states that one must keep the design as simple and small as possible. This well known principle deserves emphasis for protection mechanisms because design and implementation errors that result in unwanted access paths will not be noticed during normal use.As a result, techniques such as line-by-line inspection of software that implements protection mechanisms are necessary. For such techniques to be successful, a small and simple design is essential. SSO support this principle by simplifying the authentication process"
+    },
+    "q7":{
+        "question": "Database triggers are PRIMARILY useful for providing which of the following detective software assurance capability?",
+        "options":[
+            "Availability",
+            "Authorization",
+            "Auditing",
+            "Archiving"
+        ],
+        "answer": "Auditing",
+        "explanation" : "All stored procedures could be updated to incorporate auditing logic; however a better solution is to use database triggers. You can use triggers to monitor actions performed on the database tables and automatically log auditing information."
+    },
+    "q8":{
+        "question": "During a threat modeling exercise, the software architecture is reviewed to identify",
+        "options":[
+            "attackers",
+            "business impact",
+            "critical assets",
+            "entry points"
+        ],
+        "answer": "entry points",
+        "explanation" : "During threat modeling, the application is dissected into its functional components. The development team analyzes the components at every entry point and traces data flow through all functionality to identify security weaknesses"
+    },
+    "q9":{
+        "question": "A Man-in-the-Middle (MITM) attack is PRIMARILY an expression of which type of the following threats?",
+        "options":[
+            "Spoofing",
+            "Tampering",
+            "Repudiation",
+            "Information disclosure"
+        ],
+        "answer": "Spoofing",
+        "explanation" : "Although it may seem that a MITM attack is an expression of the threat of repudiation, and it very well could be, it is PRIMARILY a spoofing threat. In a spoofing attack, an attacker impersonates a different person and pretends to be a legitimate user of the system. Spoofing attack is mitigated through authentication so that adversaries cannot become any other user or assume the attributes of another user. When undertaking a threat modeling exercise, it is important to list all possible threats, regardless of whether they have been mitigated so that you can later generate test cases where necessary. If the threat is not documented, there is a high likelihood that the software will not be tested for those threats. Using a categorized list of threats (such as STRIDE which is an acronym of Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service and Elevation of Privilege) is useful to list all possible threats."
+    },
+    "q10":{
+        "question": "IPSec technology which helps in the secure transmission of information operates in which layer of the Open Systems Interconnect (OSI) model?",
+        "options":[
+            "Transport",
+            "Network",
+            "Session",
+            "Application"
+        ],
+        "answer": "Network",
+        "explanation" : "Although software security has specific implications on layer 7, the application of the OSI stack, the security at other levels of the OSI stack is also important and should be leveraged to provide defense in depth. The seven layers of the OSI stack are Physical (layer 1), Data Link (layer 2), Network (layer 3), Transport (layer 4), Session (layer 5), Presentation (layer 6) and Application (layer 7). SSL and IPSec can be used to assure confidentiality for data in motion. SSL operates at the Transport Layer (layer 4) and IPSec operates at the Network Layer (layer 3) of the OSI model."
+    },
+    "q11":{
+        "question": "When internal business functionality is abstracted into service oriented contract based interfaces, it is PRIMARILY used to provide fo",
+        "options":[
+            "interoperability",
+            "authentication",
+            "authorization",
+            "installation ease"
+        ],
+        "answer": "interoperability",
+        "explanation" : "A distinctive characteristic of SOA is that the business logic is abstracted into discoverable and reusable contract based interfaces to promote interoperability between heterogeneous computing ecosystems"
+    },
+    "q12":{
+        "question": "At which layer of the Open Systems Interconnect (OSI) model must security controls be designed to effectively mitigate side channel attacks?",
+        "options":[
+            "Transport",
+            "Network",
+            "Data link",
+            "Physical"
+        ],
+        "answer": "Physical",
+        "explanation" : "Side channel attacks use unconventional means to compromise the security of the system and in most cases require physical access to the device or system. Therefore, to mitigate side channel attacks, physical protection can be used. "
+    },
+    "q13":{
+        "question": "Which of the following software architectures is effective in distributing the load between the client and the server, but since it includes the client to be part of the threat vectors it increases the attack surface?",
+        "options":[
+            "Software as a Service (SaaS)",
+            "Service Oriented Architecture (SOA)",
+            "Rich Internet Application (RIA)",
+            "Distributed Network Architecture (DNA)"
+        ],
+        "answer": "Rich Internet Application (RIA)",
+        "explanation" : "RIAs require Internet Protocol (IP) connectivity to the backend server. Browser sandboxing is recommended since the client is also susceptible to attack now, but it is not a requirement. The workload is shared between the client and the server and the user experience and control is increased in RIA architecture."
+    },
+    "q14":{
+        "question": "When designing software to work in a mobile computing environment, the Trusted Platform Module (TPM) chip can be used to provide which of the following types of information?",
+        "options":[
+            "Authorization",
+            "Identification",
+            "Archiving",
+            "Auditing"
+        ],
+        "answer": "Identification",
+        "explanation" : "Trusted Platform Module (TPM) is the name assigned to a chip that can store cryptographic keys, passwords, or certificates. It can be used to protect mobile devices besides personal computers. It is also used to provide identity information for authentication purposes in mobile computing. It also assures secure startup and integrity. The TPM can be used to generate values used with whole disk encryption such as the Windows Vista’s BitLocker. It is developed to specifications of the Trusted Computing Group."
+    },
+    "q15":{
+        "question": "When two or more trivial pieces of information are brought together with the aim of gleaning sensitive information, it is referred to as what type of attack?",
+        "options":[
+            "Injection",
+            "Inference",
+            "Phishing",
+            "Polyinstantiation"
+        ],
+        "answer": "Inference",
+        "explanation" : "An inference attack is one in which the attacker combines information that is available in the database with a suitable analysis to glean information that is presumably hidden or not as evident. This means that individual data elements when viewed collectively can reveal confidential information. It is therefore, possible to have public elements in a database reveal private information by inference. The first thing to ensure is that the database administrator does not have direct access to the data in the database and that the administrator’s access of the database is mediated by a program (the application) and audited. In situations, where direct database access is necessary, it is important to ensure that the database design is not susceptible to inference attacks. Inference attacks can be mitigated by polyinstantiation."
+    },
+    "q16":{
+        "question": "The inner workings and internal structure of backend databases can be protected from disclosure using",
+        "options":[
+            "triggers",
+            "normalization",
+            "views",
+            "encryption"
+        ],
+        "answer": "views",
+        "explanation" : "Views provide a number of benefits with regard to security. They abstract the source of the data being presented, keeping the internal structure of the database hidden from the user. Furthermore, views can be created on a subset of columns in a table. This capability can allow users granular access to specific data elements. Views can also be used to limit access to specific rows of data as well."
+    },
+    "q17":{
+        "question": "Choose the BEST answer. Configurable settings for logging exceptions, auditing and credential management must be part of",
+        "options":[
+            "database views.",
+            "security management interfaces.",
+            "global files.",
+            "exception handling."
+        ],
+        "answer": "security management interfaces.",
+        "explanation" : "Security Management Interfaces (SMI) are administrative interfaces for your application which have the highest level of privileges on the system and can do tasks such as: ■ Users provisioning - adding/deleting/enabling users accounts. ■ Granting rights to different user roles. ■ System restart. ■ Changing system security settings. ■ Accessing audit trails, user credentials, exception logs. Although SMIs are often not explicitly stated in the requirements, and subsequently not threat modeled, strong controls such as least privilege and access controls must be designed and built in when developing SMI because the compromise of a SMI can be devastating, ranging from complete compromise, installing backdoors, to disclosure, alteration and destruction (DAD) attacks on audit logs, user credentials, exception logs, etc. SMI need not be deployed always with the default accounts that is set by the software publisher, although it is often observed to be."
+    },  
+    "q18":{
+        "question": "The token that is PRIMARILY used for authentication purposes in a Single Sign (SSO) implementation between two different companies is",
+        "options":[
+            "Kerberos",
+            "Security Assert Markup Language (SAML)",
+            "Liberty alliance ID-FF",
+            "One Time password (OTP)"
+        ],
+        "answer": "Security Assert Markup Language (SAML)",
+        "explanation" : "Federation technology is usually built on a centralized identity management architecture leveraging industry standard identity management protocols such as SAML, WS Federation (WS-*) or Liberty Alliance. Of the three major protocol familier associated with federation, SAML seems to be recognized as the de facto standard for enterprise to enterprise federation. SAML works in cross domain settings while Kerberos tokens are useful only within a single domain."
+    },
+    "q19":{
+        "question": "Syslog implementations require which additional security protection mechanisms to mitigate disclosure attacks?",
+        "options":[
+            "Unique session identifier generation and exchange.",
+            "Transport Layer Security.",
+            "Digital Rights Management (DRM)",
+            "Data Loss Prevention"
+        ],
+        "answer": "Transport Layer Security.",
+        "explanation" : "The syslog network protocol has become a de facto standard for logging program and server information over the Internet. Many routers, switches and remote access devices will transmit system messages, and there are syslog servers available for Windows and UNIX operating systems. TLS protection mechanisms such as SSL wrappers are needed to protect syslog data in transmit as they are transmitted in the clear. SSL wrappers like stunnel provide transparent SSL functionality."
+    },  
+    "q20":{
+        "question": "Rights and privileges for a file can be granularly granted to each client using which of the following technologies.",
+        "options":[
+            "Data Loss Prevention (DLP).",
+            "Software as a Service (SaaS)",
+            "Flow control",
+            "Digital Rights Management (DRM)"
+        ],
+        "answer": "Digital Rights Management (DRM)",
+        "explanation" : "Digital Rights Management (DRM) solutions give copyright owners control over access and use of the copyright protected material. When users want to access or sue digital copyrighted material, they can do so on the terms of the copyright owner."
+    },
+    "q21":{
+        "question": "Which of the following is known to circumvent the ring protection mechanisms in operating systems?",
+        "options":[
+            "Cross Site Request Forgery (CSRF)",
+            "Coolboot",
+            "SQL Injection",
+            "Rootkit"
+        ],
+        "answer": "Rootkit",
+        "explanation" : "Rootkits are known to compromise the operating system ring protection mechanisms and masquerade as a legitimate operating system taking siege of it."
+    },  
+    "q22":{
+        "question": "When the software is designed using Representational State Transfer (REST) architecture, it promotes which of the following good programming practices?",
+        "options":[
+            "High Cohesion",
+            "Low Cohesion",
+            "Tight Coupling",
+            "Loose Coupling"
+        ],
+        "answer": "Loose Coupling",
+        "explanation" : "Since REST is a client/server model, in which the requests and responses are built around transition state of resources, it promotes loose coupling between the client and server."
+    },
+    "q23":{
+        "question": "Which of the following components of the Java architecture is primarily responsible to ensure type consistency, safety and assure that there are no malicious instructions in the code?",
+        "options":[
+            "Garbage collector",
+            "Class Loader",
+            "Bytecode Verfier",
+            "Java Security Manager"
+        ],
+        "answer": "Bytecode Verfier",
+        "explanation" : "Bytecode Verifier is the most important component of the JVM from a type consistency viewpoint. The Bytecode Verifier checks to see if the .class files are in the Class file format and double checks to ensure that there are no malicious instructions in the code that would compromise the rules of type safety in Java."
+    },  
+    "q24":{
+        "question": "The primary security concern when implementing cloud applications is related to",
+        "options":[
+            "Insecure APIs",
+            "Data leakage and/or loss",
+            "Abuse of computing resources",
+            "Unauthorized access"
+        ],
+        "answer": "Unauthorized access",
+        "explanation" : "Although the nefarious use of APIs, shared technologies issues that can be abused and unauthorized access of data and software hosted in the cloud, the primary security concern is related to data disclosure, which includes leakage and/or loss."
+    },
+    "q25":{
+        "question": "The predominant form of malware that infects mobile apps is",
+        "options":[
+            "Virus",
+            "Ransomware",
+            "Worm",
+            "Spyware"
+        ],
+        "answer": "Ransomware",
+        "explanation" : "Ransomware that locks screens on mobile devices is on the rise and predominantly observed in mobile apps that don’t implement sufficient protection controls."
+    },  
+    "q26":{
+        "question": "Most Supervisory Control And Data Acquisition (SCADA) systems are susceptible to software attacks because",
+        "options":[
+            "they were not initially implemented with security in mind",
+            "the skills of a hacker has increased significantly",
+            "the data that they collect are of top secret classification",
+            "the firewalls that are installed in front of these devices have been breached."
+        ],
+        "answer": "they were not initially implemented with security in mind",
+        "explanation" : "Most SCADA systems were not originally designed with security in mind and basic protection mechanisms like authentication and authorization, to these systems is weak, if at all present"
+    }
+
+}
+]
+}

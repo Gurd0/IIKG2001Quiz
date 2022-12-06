@@ -1,17 +1,7 @@
 <form method="post" id="quizz"></form>
 
 <script>
-   
-  
-  
-  async function fetchQuizz(){
-    const response = await fetch("test.json");
-    fetch("test.json")
-    .then(response => response.json())
-    .then(json => {
-      return(json)
-    });
-}
+
 
 const createQuestion = ({ question, answer, options, explanation }, i) => {
   const field = document.createElement('fieldset')
@@ -50,28 +40,62 @@ function checkAns(option, answer, explanation, i){
 
 async function createQuizz() {
   const form = document.getElementById('quizz')
-  const response = await fetch("test.json");
-    fetch("test.json")
-    .then(response => response.json())
-    .then(json => {
-      const questions =  Object.values(json)
-     
-      
-    // Shuffle array
-    const shuffled = shuffleArray(questions)//questions.sort(() => 0.5 - Math.random());
-
-    // Get sub-array of first n elements after shuffled
-    let selected = shuffled.slice(0, 5);
-
-      
+    await parseJson().then( selected => {
       selected.forEach((question, i) => 
       {
         const field = createQuestion(question, i + 1)
         form.appendChild(field)
         
       })
-      
+   })
+
+}
+async function parseJson(size, domain){
+  fs.readFile('public/test.json', (err, data) => {
+    if (err) throw err;
+    let rawJson = JSON.parse(data);
+    let json = []
+    //TODO hent domene
+    switch(domain) {
+      case "domain1":
+        json = rawJson.domains[0]
+        break;
+      case "domain2":
+        json = rawJson.domains[1]
+        break;
+      case "domain3":
+        json = rawJson.domains[2]
+        break;
+      case "all":
+        for (var i = 0; i < rawJson.domains.length; i++) {
+          json.push(rawJson.domains[i])
+        } 
+        //console.log(json)
+        break;
+        
+        
+      default:
+        //TODO 
+    }
+    
+    let combinedJson = []
+    let questions
+    json.forEach(element => {
+      questions = Object.values(element)
+      questions.forEach(ques => {
+          combinedJson.push(ques)
+      })
     });
+   
+    const shuffled = shuffleArray(combinedJson)
+    
+
+    //console.log(questions)
+    //slice list
+    let list = shuffled.slice(0, size);
+    return list
+  });
+  
 }
 function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
