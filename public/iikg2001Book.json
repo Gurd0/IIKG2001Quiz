@@ -480,7 +480,7 @@
             "question": "The requirements that assure reliability and prevent alterations are to be identified in which section of the software requirements specifications (SRS) documentation?",
             "options":[
                 "Confidentiality",
-                "Confidentiality",
+                "Integrity",
                 "Availability",
                 "Accountability"
             ],
